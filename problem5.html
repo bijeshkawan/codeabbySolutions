@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>minimum of 3</title>
+</head>
+<body>
+<p id="demo"></p>
+
+
+<script>
+    var x = "7 15 300";
+    var y = "3 20 550";
+    var z = "5 40 137";
+    var a = x.split(" ");
+    var b = y.split(" ");
+    var c = z.split(" ");
+    var e = parseInt(a);
+    var f = parseInt(b);
+    var g = parseInt(c);
+    var w = [];
+    var i = 0;
+
+    while (i < a.length) {
+        if (e[i] < f[i] && e[i] < g[i]) {
+            w += e[i] + " ";
+
+        }
+
+        else if (f[i] < e[i] && f[i] < g[i]) {
+            w += f[i] + " ";
+        }
+        else {
+            w += g[i] + " ";
+
+        }
+        document.getElementById("demo").innerHTML = w;
+        i++;
+    }
+
+
+</script>
+
+</body>
+</html>
+
+<!--7  3 5-->
+<!--15 20 40-->
+<!--300 550 137-->
